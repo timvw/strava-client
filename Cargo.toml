@@ -1,8 +1,11 @@
 [package]
 name = "strava_client"
-version = "3.0.0"
-authors = ["OpenAPI Generator team and contributors"]
+version = "0.1.0"
+authors = ["Tim Van Wassenhove, OpenAPI Generator team and contributors"]
 edition = "2018"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/timvw/strava-rust/"
+description = "Client API for Strava. https://developers.strava.com/"
 
 [dependencies]
 serde = "^1.0"
