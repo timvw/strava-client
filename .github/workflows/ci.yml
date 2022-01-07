@@ -17,6 +17,7 @@ jobs:
 
     strategy:
       fail-fast: false
+
       matrix:
         os: [ubuntu-latest, macos-latest]
         rust: [stable]
@@ -38,6 +39,7 @@ jobs:
     env:
       RUST_BACKTRACE: full
       RUSTV: ${{ matrix.rust }}
+
     steps:
       - name: Checkout sourcecode
         uses: actions/checkout@v2
@@ -47,6 +49,9 @@ jobs:
           toolchain: ${{ matrix.rust }}
           profile: minimal
           override: true
-      - uses: Swatinem/rust-cache@v1
+      - name: Cache
+        uses: Swatinem/rust-cache@v1
+        with:
+          key: ${{ matrix.os }}-${{ env.RUST_BIN_DIR }}-${{ matrix.binary }}
       - name: ${{ matrix.make.name }}
         run: ${{ matrix.make.cmd }}
