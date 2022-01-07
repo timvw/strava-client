@@ -158,5 +158,5 @@ cargo doc --open
 
 ## Author
 
-[Tim Van Wassenhove](github@timvw.be)
+[Tim Van Wassenhove](github@timvw.be).
 
