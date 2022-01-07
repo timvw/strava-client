@@ -741,3 +741,8 @@ pub async fn update_activity_by_id(
         Err(Error::ResponseError(local_var_error))
     }
 }
+
+#[test]
+pub fn test_github_actions_ccov() {
+    assert!(true)
+}
