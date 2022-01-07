@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 
 /// struct for passing parameters to the method [`create_activity`]
 #[derive(Clone, Debug, Default)]
-pub struct CreateActivityParams {
+pub struct CreateActivityParamsX {
     /// The name of the activity.
     pub name: String,
     /// Type of activity. For example - Run, Ride etc.
