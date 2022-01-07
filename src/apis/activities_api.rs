@@ -15,7 +15,7 @@ use crate::apis::ResponseContent;
 
 /// struct for passing parameters to the method [`create_activity`]
 #[derive(Clone, Debug, Default)]
-pub struct CreateActivityParamsX {
+pub struct CreateActivityParams {
     /// The name of the activity.
     pub name: String,
     /// Type of activity. For example - Run, Ride etc.
@@ -718,6 +718,8 @@ pub async fn update_activity_by_id(
 
     let local_var_status = local_var_resp.status();
     let local_var_content = local_var_resp.text().await?;
+
+    println!("non breaking change...");
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         let local_var_entity: Option<UpdateActivityByIdSuccess> =
