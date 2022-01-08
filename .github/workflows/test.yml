@@ -20,8 +20,8 @@ jobs:
           override: true
       - name: Cache
         uses: Swatinem/rust-cache@v1
-          with:
-            key: ${{ runner.os }}-build
+        with:
+          key: ${{ runner.os }}-build
       - name: Generate test result and coverage report
         run: |
           cargo install cargo2junit;
